@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Significado dos Memez</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, purple, blue, white);
+            background-size: 400% 400%;
+            animation: gradientAnimation 10s ease infinite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .nyan-cat {
+            position: absolute;
+            width: 100px;
+            height: auto;
+            top: 50%;
+            animation: fly 10s linear infinite;
+        }
+
+        @keyframes fly {
+            0% {
+                left: -10%;
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10%);
+            }
+            100% {
+                left: 110%;
+                transform: translateY(0);
+            }
+        }
+
+        .nyan-cat:nth-child(odd) {
+            animation-duration: 12s;
+            animation-delay: -3s;
+            top: 20%;
+        }
+
+        .nyan-cat:nth-child(even) {
+            animation-duration: 15s;
+            animation-delay: -5s;
+            top: 80%;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .text span {
+            font-size: 2rem;
+            opacity: 0.2;
+            transform: rotate(-20deg);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(-20deg); }
+            50% { transform: translateY(-10px) rotate(-20deg); }
+            100% { transform: translateY(0) rotate(-20deg); }
+        }
+
+        .explanation {
+            text-align: center;
+            max-width: 80%;
+            font-size: 1.2rem;
+            color: #f0f0f0;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <!-- Nyan Cats animados -->
+    <img src="https://media.tenor.com/-AyTtMgs2mMAAAAi/nyan-cat-nyan.gif" class="nyan-cat" style="top: 10%;">
+    <img src="https://media.tenor.com/-AyTtMgs2mMAAAAi/nyan-cat-nyan.gif" class="nyan-cat" style="top: 30%;">
+    <img src="https://media.tenor.com/-AyTtMgs2mMAAAAi/nyan-cat-nyan.gif" class="nyan-cat" style="top: 50%;">
+    <img src="https://media.tenor.com/-AyTtMgs2mMAAAAi/nyan-cat-nyan.gif" class="nyan-cat" style="top: 70%;">
+    <img src="https://media.tenor.com/-AyTtMgs2mMAAAAi/nyan-cat-nyan.gif" class="nyan-cat" style="top: 90%;">
+
+    <!-- GIF Centralizado -->
+    <div class="container">
+        <img src="https://media1.tenor.com/m/THj6tzhwAz8AAAAd/banido.gif" alt="GIF Centralizado">
+        <div class="text">
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+            <span>Banido</span>
+        </div>
+    </div>
+
+    <!-- Texto Explicativo -->
+    <div class="explanation">
+        <p><strong>Memes</strong> são elementos culturais ou ideias que se espalham rapidamente pela internet, muitas vezes na forma de imagens, vídeos ou frases, geralmente humorísticas. Eles são uma parte fundamental da comunicação online e podem ser usados para transmitir uma ampla gama de emoções e mensagens, muitas vezes de maneira satírica ou irônica.</p>
+    </div>
+</body>
+</html>
